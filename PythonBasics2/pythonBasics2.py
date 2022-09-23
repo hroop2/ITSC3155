@@ -10,6 +10,10 @@
 # returns the number of multiples of 3 in the range from 0
 # to n (including n).
 
+
+
+
+
 def count_threes(n):
     if n == 0:
         return 0
@@ -24,10 +28,26 @@ def count_threes(n):
 # Part B. longest_consecutive_repeating_char
 # Define a function longest_consecutive_repeating_char(s) that takes
 # a string s and returns the character that has the longest consecutive repeat.
-def longest_consecutive_repeating_char(s):
-    # YOUR CODE HERE
 
-    return
+def longest_consecutive_repeating_char(s):
+  n=len(s)
+  count=0
+  res=s[0]
+  cur_count=1
+
+  for i in range(n):
+    if (i<n-1 and s[i] == s[i+1]):
+      cur_count +=1
+
+    else:
+      if cur_count > count:
+        count = cur_count
+        res = s[i]
+      cur_count =1
+  return res
+
+  
+
 
 
 # Part C. is_palindrome
