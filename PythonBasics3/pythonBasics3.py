@@ -13,9 +13,17 @@ import re
 # (For our purposes, a number is any character that is 0,1,2,3,4,5,6,7,8, or 9.)
 # Note: Be sure to use RegEx!
 def starts_with_non_number(s):
-  # YOUR CODE HERE
+   # YOUR CODE HERE
+  non_num=re.search("^[0-9]", s)
+  if(non_num == None):
+    return True
+  else:
+    return False
 
-  return
+
+
+ 
+
 
 # # Part B. multiple_words
 # Define a function multiple_words(s) that takes a string and returns true
@@ -25,8 +33,13 @@ def starts_with_non_number(s):
 # with at least one character on either side!
 def multiple_words(s):
   # YOUR CODE HERE
+  
+  
+    return 
+ 
+  
 
-  return
+  
 
 
 # Part C. reserved_us_tld
@@ -38,5 +51,6 @@ def multiple_words(s):
 # Hint: the URL should start with https and end with one of the TLDs
 def reserved_us_tld(s):
   # YOUR CODE HERE
-  
   return
+
+
