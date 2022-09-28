@@ -33,9 +33,11 @@ def starts_with_non_number(s):
 # with at least one character on either side!
 def multiple_words(s):
   # YOUR CODE HERE
-  
-  
-    return 
+  multiWord = re.search("\w.*\s.*\w",s)
+  if(multiWord):
+    return True
+  else:
+    return False
  
   
 
@@ -51,6 +53,7 @@ def multiple_words(s):
 # Hint: the URL should start with https and end with one of the TLDs
 def reserved_us_tld(s):
   # YOUR CODE HERE
-  return
+  
+    return 
 
 
