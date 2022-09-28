@@ -41,11 +41,11 @@ class TestPythonBasicsOne(unittest.TestCase):
 
         self.assertEqual(pythonBasics3.multiple_words(" one-sided? "), False)
 
-        self.assertEqual(pythonBasics3.multiple_words(" I 9348398438949 "), False)
+        self.assertEqual(pythonBasics3.multiple_words("I 9348398438949"), True)
 
-        self.assertEqual(pythonBasics3.multiple_words(" Hello-its-me "), False)
+        self.assertEqual(pythonBasics3.multiple_words("Hello-its-me"), False)
 
-        self.assertEqual(pythonBasics3.multiple_words("tester for real 4532!!! "), False)
+        self.assertEqual(pythonBasics3.multiple_words("HI"), False)
 
         # Please add three more test cases following the order above
 
