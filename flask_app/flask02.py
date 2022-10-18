@@ -10,13 +10,25 @@ app = Flask(__name__)     # create an app
 # @app.route is a decorator. It gives the function "index" special powers.
 # In this case it makes it so anyone going to "your-url/" makes this function
 # get called. What it returns is what is shown as the web page
+
+
 @app.route('/index')
 def index():
-    a_user={'name': 'Hannah', "email" : 'mogli@uncc.edu'}
-    return render_template('index.html' , user=a_user)
+    a_user = {'name': 'Hannah', "email": 'mogli@uncc.edu'}
+    return render_template('index.html', user=a_user)
 
 
-app.run(host=os.getenv('IP', '127.0.0.1'),port=int(os.getenv('PORT', 5000)),debug=True)
+app.run(host=os.getenv('IP', '127.0.0.1'), port=int(
+    os.getenv('PORT', 5000)), debug=True)
+
+
+@app.route('/notes')
+def get_notes():
+    notes = {1: {'title': 'First note', 'text': 'This is my first note', 'date': '10-1-2020'},
+             2: {'title': 'Second note', 'text': 'This is my second note', 'date': '10-2-2020'}
+             }
+    return render_template('notes.html', notes=notes)
+
 
 # To see the web page in your web browser, go to the url,
 #   http://127.0.0.1:5000
