@@ -50,11 +50,13 @@ def new_note():
     a_user={'name': 'Mogli','email':'mogli@uncc.edu'}
     print('request method is',request.method)
     if request.method == 'POST':
-        return '<h1>Post method used for this request </h1>'
+        request_data = request.form
+        return f"data: {request_data} !"
+        
     else:
         return render_template('new.html', user = a_user)
 
-    return render_template('new.html', user=a_user)
+    
 
 
 # To see the web page in your web browser, go to the url,
